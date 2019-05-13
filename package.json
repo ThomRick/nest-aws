@@ -1,0 +1,36 @@
+{
+  "name": "@nesjts/aws",
+  "version": "0.0.0",
+  "description": "Nest framework AWS libs",
+  "main": "index.js",
+  "scripts": {
+    "compile": "rm -rf lib/* && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThomRick/nest-aws.git"
+  },
+  "author": "ThomRick",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThomRick/nest-aws/issues"
+  },
+  "homepage": "https://github.com/ThomRick/nest-aws#readme",
+  "peerDependencies": {
+    "@nestjs/common": "^6.2.0",
+    "@nestjs/core": "^6.2.0",
+    "aws-sdk": "^2.453.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.2"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^6.2.0",
+    "@nestjs/core": "^6.2.0",
+    "@types/node": "^12.0.0",
+    "aws-sdk": "^2.453.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.2",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
+  }
+}
