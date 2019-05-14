@@ -1,7 +1,6 @@
-import { DynamicModule, Module, Provider } from '@nestjs/common';
-import { S3BucketOptions, S3ModuleAsyncOptions, S3ModuleOptions } from './interfaces';
+import { DynamicModule, Module } from '@nestjs/common';
+import { S3ModuleAsyncOptions, S3ModuleOptions } from './interfaces';
 import { S3CoreModule } from './s3-core.module';
-import { S3ProviderFactory } from './s3-provider.factory';
 
 @Module({})
 export class S3Module {
@@ -20,15 +19,6 @@ export class S3Module {
       imports: [
         S3CoreModule.registerAsync(options),
       ],
-    };
-  }
-
-  public static forFeature(buckets: S3BucketOptions[] = []): DynamicModule {
-    const providers: Provider[] = S3ProviderFactory.createBuckets(buckets);
-    return {
-      module: S3Module,
-      providers,
-      exports: providers,
     };
   }
 }
